@@ -1,0 +1,71 @@
+<div class="container-sm">
+    <div class="py-2 text-center">
+        <h2>Alta de Profesional</h2>
+        <p class="lead">Para agregar a un Profesional, todos los campos son obligatorios.</p>
+    </div>
+    <div class="row g-5">
+        <div class="col-md-7 col-lg-8">
+            <h4 class="mb-3">Nuevo Profesional</h4>
+            <form action="/admin/profesionales/modificar" method="post" class="needs-validation"
+                enctype="multipart/form-data" novalidate="">
+                <div class="row g-3">
+                    <div class="col-sm-3">
+
+                        <label for="id" class="form-label">ID profesional</label>
+                        <input type="number" class="form-control" name="id" id="id" value="{{profesional.id}}">
+                    </div>
+
+                    <hr class="my-4">
+                    <div class="col-sm-6">
+                        <label for="firstName" class="form-label">Nombre Completo</label>
+                        <input type="text" class="form-control" id="firstName" name="nombre" placeholder=""
+                            value="{{profesional.nombre}}" required="">
+                    </div>
+
+                    <div class="col-sm-6">
+                        <label for="lastName" class="form-label">Apellido</label>
+                        <input type="text" class="form-control" id="lastName" name="apellido" placeholder=""
+                            value="{{profesional.apellido}}" required="">
+                    </div>
+
+                    <div class="col-12">
+                        <label for="titulo" class="form-label">Título</label>
+                        <input type="text" class="form-control" name="titulo" placeholder=""
+                            value="{{profesional.titulo}}">
+                    </div>
+
+                    <div class="col-12">
+                        <label for="universidad" class="form-label">Universidad</label>
+                        <input type="text" class="form-control" name="universidad" placeholder=""
+                            value="{{profesional.universidad}}">
+                    </div>
+
+                    <div class="col-12">
+                        <label for="matricula" class="form-label">Matrícula <p class="text-secondary">Maximo 8
+                                caracteres</p></label>
+                        <input type="text" class="form-control" name="matricula" placeholder=""
+                            value="{{profesional.matricula}}">
+                    </div>
+                    <div class="col-12">
+                        <label for="imagen" class="form-label">Foto del Profesional
+                            <input type="file" class="form-control" name="imagen" id="imagen"></label>
+                    </div>
+                    <div class="col-12">
+                        <label for="">
+                        <input type="checkbox" name="img_delete" id="img_delete" value="1"> ¿Eliminar la imagen actual?</label>
+                        <input type="hidden" name="img_original" value="{{profesional.imagen}}">
+                    </div>
+
+                </div>
+                <hr class="my-4">
+                {{#if error}}
+                <p class="text-danger m-1">{{message}}</p>
+
+                <hr class="my-4">
+                {{/if}}
+                <button class="w-100 btn btn-primary btn-lg" type="submit">Modificar Profesional</button>
+            </form>
+        </div>
+    </div>
+
+</div>
