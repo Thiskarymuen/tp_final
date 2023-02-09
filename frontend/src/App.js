@@ -4,6 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
 import Nav from "./components/layout/Nav";
+import Footer from "./components/layout/Footer";
 
 import Inicio from './pages/InicioPage';
 import Contacto from './pages/ContactoPage';
@@ -14,14 +15,14 @@ function App() {
   return (
     <Router>
 
-    <Nav/>
+      <Nav />
       <Routes>
         <Route path="/" element={<Inicio />} />
         <Route path="/profesionales" element={<Profesionales />} />
         <Route path="/ContactoPage" element={<Contacto />} />
         <Route path='/PsicologiaPage' element={<Psicologia />} />
       </Routes>
-
+      <Footer />
     </Router>
   );
 }

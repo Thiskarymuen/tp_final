@@ -29,10 +29,6 @@ const Profesionales = (props) => {
                 <div class="col-lg-6 col-md-8 mx-auto">
                     <h1 class="fw-light">Estos son nuestros Profesionales</h1>
                     <p class="lead text-dark">Nuestro equipo de terapeutas cuentan con una gran experiencia en el campo de la Psicologia y los distintos tipos de Terapia.</p>
-                    <p>
-                        <a href="#//" class="btn btn-primary m-2">Main call to action</a>
-                        <a href="#//" class="btn btn-secondary m-2">Secondary action</a>
-                    </p>
                 </div>
             </div>
 
